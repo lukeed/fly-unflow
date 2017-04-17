@@ -2,39 +2,37 @@
   "name": "fly-remove-flow-types",
   "version": "0.0.0",
   "description": "Removes Flow type annotations with Fly",
-  "license": "MIT",
   "repository": "https://github.com/lukeed/fly-remove-flow-types",
   "main": "index.js",
+  "license": "MIT",
   "files": [
     "index.js"
   ],
-  "keywords":[
+  "keywords": [
     "fly",
     "fly-plugin",
-    "types"
+    "flowtype",
+    "remove",
+    "types",
+    "flow"
   ],
   "scripts": {
-    "deploy": "npm test && git push origin master && npm publish",
-    "test": "./node_modules/tape/bin/tape test/*.js | tap-spec"
+    "test": "tape test/*.js | tap-spec"
   },
   "author": {
     "name": "Luke Edwards",
     "email": "luke.edwards05@gmail.com",
     "url": "http://github.com/lukeed"
   },
-  "dependencies": {},
+  "dependencies": {
+    "flow-remove-types": "^1.2.0"
+  },
   "devDependencies": {
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2",
     "xo": "*"
-  },   
+  },
   "engines": {
     "node": ">= 4.6"
-  },
-  "xo": {
-    "semicolon": false,
-    "ignore": [
-      "test/*.js"
-    ]
   }
 }

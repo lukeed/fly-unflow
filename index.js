@@ -1,30 +1,12 @@
-const foo = require('foo')
+const clean = require('flow-remove-types');
 
-/**
- * Documentation: Writing Plugins
- * @see https://github.com/flyjs/fly#plugin
- * @see https://github.com/flyjs/fly#external-plugins
- */
 module.exports = function (fly, utils) {
-  // promisify before running else repeats per execution
-  const render = utils.promisify(foo.bar)
+  fly.plugin('removeTypes', {every: false}, function * (files, opts) {
+  	opts = Object.assign({pretty: true, all: true}, opts);
 
-  // Option #1
-  fly.plugin('types', {/*every: true, files: true*/}, function * (file, opts) {
-    console.log('a single file object', file) //=> { base, dir, data }
-    console.log('user-provided config', opts) //=> null || {}
-    yield render(opts)
-  })
-
-  // Option #2
-  /*
-    fly.plugin({
-      name: 'types',
-      every: true,
-      files: true,
-      *func(file, opts) {
-        // ...same
-      }
-    })
-   */
-}
+  	files.forEach(file => {
+	  	const out = clean(file.data, opts);
+	  	file.data = Buffer.from(data);
+  	});
+  });
+};
