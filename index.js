@@ -5,8 +5,8 @@ module.exports = function (fly, utils) {
   	opts = Object.assign({pretty: true, all: true}, opts);
 
   	files.forEach(file => {
-	  	const out = clean(file.data, opts);
-	  	file.data = Buffer.from(data);
+	  	const out = clean(file.data.toString(), opts);
+	  	file.data = Buffer.from(out.toString());
   	});
   });
 };
