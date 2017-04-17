@@ -1,6 +1,6 @@
 {
   "name": "fly-unflow",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Removes Flow type annotations with Fly",
   "repository": "https://github.com/lukeed/fly-unflow",
   "main": "index.js",
