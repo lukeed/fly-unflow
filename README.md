@@ -1,23 +1,11 @@
-<div align="center">
-  <a href="http://github.com/flyjs/fly">
-    <img width=200px  src="https://cloud.githubusercontent.com/assets/8317250/8733685/0be81080-2c40-11e5-98d2-c634f076ccd7.png">
-  </a>
-</div>
+# fly-unflow [![][travis-badge]][travis-link]
 
-# fly-remove-flow-types
-
-> [Types](https://github.com/lukeed/fly-remove-flow-types) plugin for _[Fly][fly]_.
-
-[![][fly-badge]][fly]
-[![npm package][npm-ver-link]][releases]
-[![][dl-badge]][npm-pkg-link]
-[![][travis-badge]][travis-link]
-[![][mit-badge]][mit]
+> Removes [Flow](https://flow.org/) type annotations with Fly
 
 ## Install
 
-```a
-npm install --save-dev fly-remove-flow-types
+```sh
+npm install --save-dev fly-unflow
 ```
 
 ## Usage

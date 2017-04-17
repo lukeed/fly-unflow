@@ -1,8 +1,8 @@
 {
-  "name": "fly-remove-flow-types",
+  "name": "fly-unflow",
   "version": "0.0.0",
   "description": "Removes Flow type annotations with Fly",
-  "repository": "https://github.com/lukeed/fly-remove-flow-types",
+  "repository": "https://github.com/lukeed/fly-unflow",
   "main": "index.js",
   "license": "MIT",
   "files": [
@@ -28,6 +28,8 @@
     "flow-remove-types": "^1.2.0"
   },
   "devDependencies": {
+    "fly": "^2.0.5",
+    "fly-clear": "^1.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2",
     "xo": "*"

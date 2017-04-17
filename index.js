@@ -1,7 +1,7 @@
 const clean = require('flow-remove-types');
 
 module.exports = function (fly, utils) {
-  fly.plugin('removeTypes', {every: false}, function * (files, opts) {
+  fly.plugin('unflow', {every: false}, function * (files, opts) {
   	opts = Object.assign({pretty: true, all: true}, opts);
 
   	files.forEach(file => {
